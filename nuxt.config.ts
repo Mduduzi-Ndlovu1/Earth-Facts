@@ -3,5 +3,12 @@ export default defineNuxtConfig({
     modules: ['@nuxt/ui', '@nuxt/eslint', 'nuxt-mapbox'],
     css: ['~/assets/css/main.css'],
     compatibilityDate: '2025-07-15',
-    devtools: { enabled: true }
+    devtools: { enabled: true },
+    runtimeConfig:{
+        public:{
+            mapbox: {
+                accessToken: process.env.MAPBOX_ACCESS_TOKEN
+            }
+        }
+    }
 })
